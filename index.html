@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/game_map.js"></script>
+    <script src="js/game.js"></script>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/person.css">
+    <link rel="stylesheet" href="/css/coin.css">
+
+
+</head>
+<body>
+    <div id="parenDiv">
+        <div id="box">
+            <div class="data-box">
+                <img src="images/gfx/bonus/coin1.bmp" alt="">
+                <div class="data">
+                    <span id="score">0</span>
+                    <span>/1</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="cover" id="win">
+            <input type="button" value="新手上路" id="easy" > 
+            <input type="button" value="待添加" id="hard"  > 
+        </div>
+    </div>
+    
+    
+    <!-- 初始化 -->
+    <script>
+        var cover = document.querySelector('.cover');
+        document.getElementById('easy').onclick= function(){
+            cover.style.display="none";
+            start();
+        }
+        easy.onmouseover = function(){
+            this.style.cursor = 'pointer';
+        }
+
+        function init(){
+            createMap();
+        }
+        window.onload = function(){
+            init();   
+        }
+
+        function start(){
+            window.onkeydown = function(e){
+                console.log(e.keyCode);
+                if(e.keyCode == 37){
+                    movePerson("left",0);
+                }else if(e.keyCode == 39){
+                    movePerson("right",0);
+                }else if(e.keyCode == 32){
+                    movePerson("up",0)
+                    setTimeout("movePerson('down',0)","100");
+                    // test()=
+                }
+            }
+
+            window.onkeyup = function(e){
+                if(e.keyCode == 37){
+                    stopMovePerson()
+                }else if(e.keyCode == 39){
+                    stopMovePerson()
+                }else if(e.keyCode == 32){
+                    stopMovePerson();
+                    // stopCoinFall()
+                }
+            }
+        }
+       
+    </script>
+</body>
+</html>

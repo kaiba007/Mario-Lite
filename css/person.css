@@ -1,0 +1,77 @@
+/* 人物样式 */
+
+/* 人物向右动画 */
+@keyframes personMinRightA{
+    from{
+        background-image:url('../images/gfx/characters/small/player1r.bmp') ;
+    }
+    to{
+        background-image:url('../images/gfx/characters/small/player2r.bmp') ;
+    }
+}
+/* 人物向左动画 */
+@keyframes personMinLeftA{
+    from{
+        background-image:url('../images/gfx/characters/small/player1l.bmp') ;
+    }
+    to{
+        background-image:url('../images/gfx/characters/small/player2l.bmp') ;
+    }
+}
+
+/* 人物向右上动画 */
+@keyframes personMinRightUpA{
+    from{
+        background-image:url('../images/gfx/characters/small/player1r.bmp') ;
+    }
+    to{
+        background-image:url('../images/gfx/characters/small/player3r.bmp') ;
+    }
+}
+/* 人物向左上动画 */
+@keyframes personMinLeftUpA{
+    from{
+        background-image:url('../images/gfx/characters/small/player1l.bmp') ;
+    }
+    to{
+        background-image:url('../images/gfx/characters/small/player3l.bmp') ;
+    }
+}
+
+.startPersonMinRightA{
+    animation-name:personMinRightA;
+    /* 规定动画完成一个周期花费的时间 */
+    animation-duration:250ms;
+    /* 规定动画的速度曲线 */
+    animation-timing-function: linear;
+    /* 规定动画播放的次数 无限次 */
+    animation-iteration-count: infinite;
+}
+.startPersonMinLeftA{
+    animation-name:personMinLeftA;
+    /* 规定动画完成一个周期花费的时间 */
+    animation-duration:250ms;
+    /* 规定动画的速度曲线 */
+    animation-timing-function: linear;
+    /* 规定动画播放的次数 无限次 */
+    animation-iteration-count: infinite;
+}
+
+.startPersonMinLeftUpA{
+    animation-name:personMinLeftUpA;
+    /* 规定动画完成一个周期花费的时间 */
+    animation-duration:200ms;
+    /* 规定动画的速度曲线 */
+    animation-timing-function: linear;
+    /* 规定动画播放的次数 无限次 */
+    animation-iteration-count: 1;
+}
+.startPersonMinRightUpA{
+    animation-name:personMinRightUpA;
+    /* 规定动画完成一个周期花费的时间 */
+    animation-duration:200ms;
+    /* 规定动画的速度曲线 */
+    animation-timing-function: linear;
+    /* 规定动画播放的次数 无限次 */
+    animation-iteration-count: 1;
+}

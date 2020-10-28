@@ -1,0 +1,92 @@
+#parenDiv{
+    width:800px;
+    height:550px;
+    margin: 0 auto;
+    position:relative;
+}
+.data-box{
+    position: relative;
+}
+.data-box img{
+    height:30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+
+}
+.data{
+    display: inline;
+    position: absolute;
+    bottom: 7px;
+    left:50px;
+}
+
+.cover{
+    width:800px;
+    height:550px;
+    position:absolute;
+    background-color:rgba(0, 0, 0, 0.6) ;
+    z-index:2;
+
+    /* 单个元素的背景不要重复 */
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+.cover>input{
+    width:180px;
+    height:55px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -90px;
+    margin-top:-100px;
+
+    font-size: 16px;
+    border-radius: 20px;
+    border:none;
+    outline:none;
+    background-image: linear-gradient(45deg,rgb(223, 122, 184),rgb(207, 174, 194));
+}
+/* .cover .easy:hover{
+    background-image: linear-gradient(45deg,rgb(190, 155, 177),rgb(207, 174, 194));
+   } */
+#hard{
+    margin-top:0px;
+}
+
+#box{
+    /* 50*16 16列*/
+    width:800px;
+    /* 50*11 11行*/
+    height:550px;
+    border:1px solid black;
+    /* 居中  设置对象上下间距为0，左右则根据宽度自适应相同值（即居中）*/
+    position: absolute;
+    background-color:#FF00FF ;
+    z-index: 1;
+}
+/* 类样式 */
+.pos{
+    position:absolute;
+    /* 单个元素的背景不要重复 */
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+.ral{
+    transform: rotateZ(-90deg);
+}
+#person{
+/* 级别最高，不会被背景挡住 */
+    z-index: 99;
+    /* 人物动起来反应慢：加一个过度：元素从一种样式逐渐变为另一种的效果 */
+    transition:left 40ms;
+}
+
+#coin{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    display: none;
+}
+
+
